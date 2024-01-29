@@ -1,0 +1,333 @@
+.home_main_web{
+    display: flex;
+    flex-direction: column;
+    /* color: aliceblue; */
+    /* height: 1000vh; */
+    /* padding: 10px; */
+    /* position: fixed;
+    top:90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    gap:0px; */
+}
+.bg_image{
+    background-image: url('../Assets/banner-bg.webp');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:95%;
+    height: 90vh;
+    position: relative;
+}
+.text_heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 60%;
+    height: 50%;
+    padding: 1.5rem;
+    /* background-color: beige; */
+}
+.text_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+.text_para_clamp{
+    font-size: clamp(2rem, 5.5vw, 3rem);
+}
+.text_para1_clamp{
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+.home_contain1{
+    background-color: #ffffff;
+    color: black;
+}
+
+.home_contain2{
+    /* flex: 0.2; */
+    /* border: 1px solid black; */
+    padding: 1rem;
+    background-color:#ffffff;
+    display: flex;
+    gap: 1rem;
+}
+.img_web{
+    flex: 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text_contain_info{
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    
+}
+
+
+.bgweb_img{
+    flex: 1;
+    background-image: url('../Assets/download.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    padding: 10px;
+}
+.Matter_info{
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 1.5rem;
+    justify-content: center;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+}
+.Matter_info:hover{
+    transform: translateY(15px);
+    cursor: pointer;
+}
+
+.home_contain3{
+    /* flex: 0.2; */
+    display: flex;
+    background-color:#feffff;
+    padding: 2rem;
+    gap: 1rem;
+}
+.person_img{
+    flex: 1;
+    padding: 1rem;
+    background-image: url('../Assets/person.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.text_content{
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+}
+.text_content:hover{
+    transform: translateY(15px);
+    cursor: pointer;
+}
+.home_contain4{
+    /* flex: 0.2; */
+    background-color:#f3f3f4;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.text_title{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards_content{
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    gap: 10px;
+}
+.text_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.home_contain5{
+    /* flex: 0.2; */
+    padding: 1rem;
+    background-color: #ffffff;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+.resume_img{
+    flex: 1;
+    padding: 10px;
+    background-image: url('../Assets/resume.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.text_matter{
+    flex: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.home_contain6{
+    /* flex: 0.2; */
+    background-color:#f4f4f4;
+    padding: 4rem;
+    display: flex;
+    gap:10px;
+}
+.text_mobile_app{
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.mobile_app_img{
+    flex: 1;
+    padding: 10px;
+    background-image: url('../Assets/Mobileapp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+.btn_mui{
+    display: none;
+}
+
+.home_contain7{
+    /* flex: 0.2; */
+    background-color:#fff;
+    padding: 4rem;
+    display: flex;
+    gap: 10px;
+}
+.text_app_alerts{
+    flex: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notify_app{
+    flex: 1;
+    background-image: url('../Assets/Untitled-design-4-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+@media (max-width:1080px) {
+    .text_heading{
+        width: 100%;
+        backdrop-filter: blur(1px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg_image{
+        height: 100vh;
+    }
+    .home_contain2{
+        flex-direction: column;
+        /* flex: 0.5; */
+    }
+    .Matter_info{
+        align-items: center;
+        gap:1rem;
+        text-align: center;
+    }
+    .bgweb_img{
+        display: none;
+    }
+    .home_contain3{
+        flex-direction: column;
+        /* flex: 0.5; */
+        padding: 1.5rem;
+    }
+    .cards_content{
+        flex-direction: column;
+        padding: unset;
+        gap: 15px;
+    }
+    .text_card{
+        background-color: #fff;
+        transition: all 0.5s;
+        box-shadow: 0px 4px;
+        box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+    .text_card:hover{
+        transform: translateY(10px);
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+    .home_contain5{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .resume_img{
+        display: none;
+    }
+    .text_matter{
+        flex:unset;
+    }
+    .home_contain6{
+        flex-direction: column;
+        padding: 1rem;
+        position: relative; 
+    }
+    .mobile_app_img{
+        display: none;
+    }
+    .text_mobile_app{
+        padding: 1rem;
+    }
+    .button_mui{
+        display:none;
+    }
+    .btn_mui{
+        display: block;
+        padding:2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: absolute;
+        background-color: #cad2d3;
+        top: -65%;
+        left:0;right: 0;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .home_contain7{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .notify_app{
+        display: none;
+    }
+    .text_app_alerts{
+        padding: 1rem;
+    }
+    
+
+}

@@ -1,0 +1,85 @@
+
+.footer_content{
+    background-color:hsl(220, 2%, 26%);
+    display: flex;
+    padding: 2rem;
+    gap: 10px;
+    color: aliceblue;
+}
+.footer_img{
+    border: 1px solid black;
+    flex: 0.5;
+    background-image: url('../Assets/brand-logo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer_text{
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.footer_map_items{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+.footer_map_item{
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+.footer_end{
+    background-color: rgb(11, 11, 11);
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+}
+.Copy_rights_text{
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+.footer_icons{
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+@media (max-width:1080px) {
+    .footer_content{
+        flex-direction: column;
+        background-color: rgb(58, 48, 108);
+        padding: 1rem;
+    }
+    .footer_text{
+        flex-wrap: wrap;
+        background-color: #fff;
+        color: black;
+        border-radius: 5px;
+    }
+    .footer_img{
+        display: none;
+    }
+    .footer_end{
+        flex-direction: column;
+        padding: unset;
+    }
+    .footer_icons{
+        flex-wrap: wrap;
+        font-size: 30px;
+    }
+}

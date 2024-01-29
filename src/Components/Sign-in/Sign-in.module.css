@@ -1,0 +1,53 @@
+.form_main{
+    display: flex;
+    background-color:#fff;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap:0px;
+    padding: 3rem;
+    overflow: auto;
+}
+.form_matter{
+    flex: 1;
+    background-color: #fff;
+    color: rgb(2, 94, 136);
+    background-image: url('../Assets/job-search-illustration.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+}
+.form_details{
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(6, 176, 249);
+}
+.text_para_clamp{
+    font-size: clamp(2rem, 5.5vw, 3rem);
+}
+.text_para1_clamp{
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+.form_login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width:1080px){
+    .form_matter{
+        background-size:100%;
+    }
+}
