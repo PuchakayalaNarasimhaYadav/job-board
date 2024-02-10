@@ -8,7 +8,6 @@ import { Button } from "@mui/material";
 import { FaAngleDown } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom"
-
 export default function Navbar() {
     const[dialougebox,setDialougebox]=useState(false);
     const[dropdown1,setDropdown1]=useState(false);
@@ -93,7 +92,7 @@ export default function Navbar() {
                     {
                         dropdown2 ?<div className={Navstyles.drop_menu2} > 
                                         <Link to='/signin' onClick={()=>setDropdown2(false)}><p>{data.item4.sign_in}</p></Link>
-                                        <p>{data.item4.register}</p>
+                                        <Link to='/signup' onClick={()=>setDropdown2(false)}><p>{data.item4.register}</p></Link>
                                         <p>{data.item4.job_seeker}</p>
                                     </div>:null
                     }
@@ -140,8 +139,8 @@ export default function Navbar() {
                                         }
                                         {
                                         dropdown2 ? <div className={Navstyles.drop_menu2}>
-                                                    <Link to='/signin'><p>{popup.data4.sign}</p></Link> 
-                                                    <p>{popup.data4.register}</p>
+                                                    <Link to='/signin' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.sign}</p></Link> 
+                                                    <Link to='/signup' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.register}</p></Link> 
                                                     <p>{popup.data4.jb_Solution}</p>
                                                 </div> : null
                                         } 
@@ -156,8 +155,7 @@ export default function Navbar() {
                                                         <p>{popup.data5.business_solution}</p>
                                                         <p>{popup.data5.pricing}</p>
                                                     </div>: null
-                                        }
-                                        
+                                        }                                     
                                     </div>
                                     <div>
                                         <Button variant="contained">Request For Demo</Button>
@@ -167,7 +165,6 @@ export default function Navbar() {
                     }
                 </div>:null
         }
-        
         <div className={Navstyles.icons}>
             {
                 dialougebox ?<IoCloseSharp size={25} onClick={()=>setDialougebox(false)}/>: <GiHamburgerMenu size={25} onClick={()=>setDialougebox(true)}/>

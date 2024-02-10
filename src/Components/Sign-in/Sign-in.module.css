@@ -1,14 +1,16 @@
 .form_main{
     display: flex;
     background-color:#fff;
-    position: fixed;
+    /* position: fixed;
     top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
-    gap:0px;
+    gap:10px;
     padding: 3rem;
-    overflow: auto;
+    overflow: auto; */
+    /* height: 100vh; */
+    margin: 30px 20px;
 }
 .form_matter{
     flex: 1;
@@ -27,27 +29,55 @@
 }
 .form_details{
     flex: 1;
-    padding: 1rem;
-    border: 1px solid black;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    color: rgb(6, 176, 249);
+    background-color: #f7f7ff;
+    gap: 1rem;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+    justify-content: center;
 }
-.text_para_clamp{
-    font-size: clamp(2rem, 5.5vw, 3rem);
+.text_paragph_clamp{
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+.text_paragphtxt_clamp{
+    color: orange;
 }
 .text_para1_clamp{
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    text-align: center;
+    color:  rgb(2, 94, 136);
+    flex: 1;
 }
 .form_login{
+    flex: 1;
+}
+.sign_uptext{
+    font-size: 14px;
+    font-weight: 500;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    margin: 10px 20px;
 }
 @media (max-width:1080px){
     .form_matter{
         background-size:100%;
+        padding:  9rem;
+        background-size: cover;
+    }
+    .form_main{
+        flex-direction: column;
+        padding: 1.5rem;
+        margin: unset;
+    }
+    .text_paragph_clamp{
+        display: none;
+    }
+    .text_paragphtxt_clamp{
+        display: none;
+    }
+    .form_details{
+        padding: 1rem;
     }
 }
