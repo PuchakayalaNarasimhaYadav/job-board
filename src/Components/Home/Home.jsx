@@ -7,7 +7,6 @@ import {Homedata,Carddata} from "./Homedata";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { FaApple,FaGooglePlay,} from "react-icons/fa";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-
 export default function Home(){
     const[dialouge,setDialouge]=useState(false)
     return(

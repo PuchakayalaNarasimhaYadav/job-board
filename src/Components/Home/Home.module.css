@@ -96,7 +96,8 @@
     transition: all 0.5s;
 }
 .Matter_info:hover{
-    transform: translateY(15px);
+    /* transform: translateY(15px); */
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -126,7 +127,8 @@
     transition: all 0.5s;
 }
 .text_content:hover{
-    transform: translateY(15px);
+    /* transform: translateY(15px); */
+    transform: scale(1.1);
     cursor: pointer;
 }
 .home_contain4{
@@ -277,8 +279,8 @@
     }
     .text_card:hover{
         transform: translateY(10px);
-        background-color: aliceblue;
         cursor: pointer;
+        background-color: #e1fff3;
     }
     .home_contain5{
         flex-direction: column;

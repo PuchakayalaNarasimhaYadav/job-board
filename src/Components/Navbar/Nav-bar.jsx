@@ -12,8 +12,7 @@ export default function Navbar() {
     const[dialougebox,setDialougebox]=useState(false);
     const[dropdown1,setDropdown1]=useState(false);
     const[dropdown2,setDropdown2]=useState(false);
-    const[dropdown3,setDropdown3]=useState(false);
-    
+    const[dropdown3,setDropdown3]=useState(false);  
     useEffect(()=>{
         if(dialougebox === true){
             document.body.style.overflow ='hidden'
@@ -21,7 +20,6 @@ export default function Navbar() {
             document.body.style.overflow = 'auto'
         }
     },[dialougebox])
-
     const Dialougedata = [
         {
             data1:'Upload CV',
@@ -61,7 +59,6 @@ export default function Navbar() {
         setDropdown1(false)
         setDropdown2(false)
     }
-    
     return (
     <>
     <div className={Navstyles.main_navbar}>
@@ -70,7 +67,6 @@ export default function Navbar() {
         <div className={Navstyles.box1}>
             <img src={logo} alt="logo" className={Navstyles.img_log_brand} />
         </div>
-
         {
             Navbardata && Navbardata.map((data,id) => (
             <div className={Navstyles.box2} key={id}>
@@ -135,15 +131,12 @@ export default function Navbar() {
                                         {popup.data4.jobseeker} 
                                         <span className={Navstyles.Drop_down} onClick={Dropdowntwo}><FaAngleDown/></span>
                                         {
-                                            
-                                        }
-                                        {
                                         dropdown2 ? <div className={Navstyles.drop_menu2}>
                                                     <Link to='/signin' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.sign}</p></Link> 
                                                     <Link to='/signup' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.register}</p></Link> 
                                                     <p>{popup.data4.jb_Solution}</p>
                                                 </div> : null
-                                        } 
+                                        }
                                     </div>
                                     <div>
                                         {popup.data5.business} 
