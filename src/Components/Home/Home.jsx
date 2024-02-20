@@ -19,15 +19,15 @@ export default function Home(){
                 <div className={HomeStyle.text_heading}>
                     <div className={HomeStyle.text_data}>
                         <div className={HomeStyle.text_para_clamp}>
-                            <p>Hire <span style={{color:'#3dbbf3'}}>Talent</span>, Post <span style={{color:'#fe8f00'}}>Jobs</span></p>
-                            <p>& View Candidates</p>
+                            <p>Find Your <span style={{color:'#3dbbf3'}}>Next Hire</span>, Post <span style={{color:'#fe8f00'}}>Jobs</span></p>
+                            <p>& Discover Skilled Candidates</p>
                         </div>
                         <div>
                         <h3>Contact millions of profile to here</h3>
                         </div>
                             <Stack spacing={3} direction="row" >
-                                <Button variant="outlined">FIND JOBS</Button>
-                                <Button variant="contained">HIRE TALENT</Button>
+                                <Button variant="outlined" style={{textTransform:'capitalize'}}>Find Jobs</Button>
+                                <Button variant="contained" style={{textTransform:'capitalize'}}>Hire Talent</Button>
                             </Stack>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ export default function Home(){
                             <p>from any location, run a reference check and hire talent.</p>
                         </div>
                         <div>
-                            <Button variant="contained">LEARN MORE</Button>
+                            <Button variant="contained" style={{textTransform:'capitalize'}}>Learn More</Button>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ export default function Home(){
                     {
                         Homedata && Homedata.map((home,id)=>(
                             <div key={id}>
-                                <img src={home.images} alt={home.id}/>
+                                <p>{home.images}</p>
                                 <h3>{home.Title}</h3>
                                 <p>{home.para1}</p>
                                 <p>{home.para2}</p>
@@ -78,7 +78,7 @@ export default function Home(){
                             <p>Jobseekers can access full-time, part-time, or work-from-home jobs on the website. Optimise your profile and search jobs for Free.</p>
                         </div>
                         <div>
-                            <Button variant="contained" >GET HIRED</Button>
+                            <Button variant="contained" style={{textTransform:'capitalize'}}>Get Hired</Button>
                         </div>               
                 </div>
             </div>
@@ -94,7 +94,7 @@ export default function Home(){
                     {
                         Carddata && Carddata.map((item,ft)=>(
                             <div key={ft} className={HomeStyle.text_card}>
-                                <div>
+                                <div className={HomeStyle.card_img_size}>
                                 <img src={ item.img} alt={ft} />
                                 </div>
                                 <h3>{item.Title}</h3>
@@ -107,7 +107,7 @@ export default function Home(){
                     }
                 </div>
                 <div>
-                    <Button variant="contained">SIGN UP AS JOBSEEKER</Button>
+                    <Button variant="contained" style={{textTransform:'capitalize'}}>Signup as Job seeker</Button>
                 </div>
             </div>
             <div className={HomeStyle.home_contain5}>
@@ -131,7 +131,7 @@ export default function Home(){
                     <p style={{paddingLeft:'8px'}}>Get free job alerts straight to your inbox</p>
                     </div>
                     <div>
-                        <Button variant="contained">SUBMIT YOUR CV</Button>
+                        <Button variant="contained" style={{textTransform:'capitalize'}}>Submit your CV</Button>
                     </div>                    
                 </div>
             </div>
@@ -143,8 +143,8 @@ export default function Home(){
                     <p>Providing job seekers with the best career exposure. <span style={{color:'#fe8f00',cursor:'pointer'}} onClick={()=>setDialouge(true)}>Download the App now</span></p>
                     <div className={HomeStyle.button_mui}>
                         <Stack spacing={3} direction='row'>
-                        <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab'}}>Google playstore</Button>
-                        <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black'}}>App Store</Button>
+                        <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
+                        <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
                         </Stack>
                     </div>
                     {
@@ -152,8 +152,8 @@ export default function Home(){
                             
                             <div><IoIosCloseCircleOutline size={30} onClick={()=>setDialouge(false)}/></div>
                             <Stack spacing={3} direction='row'>
-                            <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab'}}>Google playstore</Button>
-                            <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black'}}>App Store</Button>
+                            <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
+                            <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
                             </Stack>
                         </div>:null
 
@@ -176,8 +176,8 @@ export default function Home(){
                     </div>
                     <div>
                         <Stack spacing={3} direction="row">
-                            <Button variant="contained" style={{backgroundColor:'#3949ab'}}>CREATE JOB ALERT</Button>
-                            <Button variant="outlined">Follow US ON TELEGRAM</Button>
+                            <Button variant="contained" style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Create Job Alert</Button>
+                            <Button variant="outlined" style={{textTransform:'capitalize'}}>Follow us on Telegram</Button>
                         </Stack>
                     </div>
                 </div>

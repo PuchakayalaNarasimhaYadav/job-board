@@ -111,10 +111,10 @@
 .person_img{
     flex: 1;
     padding: 1rem;
-    background-image: url('../Assets/person.webp');
+    background-image: url('../Assets/Job-Hunting-Illustration.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 65%;
 }
 .text_content{
     flex: 1;
@@ -162,6 +162,12 @@
     gap: 10px;
     padding: 10px;
 }
+.card_img_size img{
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+}
 .home_contain5{
     /* flex: 0.2; */
     padding: 1rem;
@@ -205,10 +211,12 @@
 .mobile_app_img{
     flex: 1;
     padding: 10px;
-    background-image: url('../Assets/Mobileapp.webp');
+    background-image: url('../Assets/Job\ notify.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size:contain;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
 }
 .btn_mui{
     display: none;
@@ -235,6 +243,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+.notify_app:hover{
+    transform:scale(1.1);
+    cursor: pointer;
 }
 
 @media (max-width:1080px) {
@@ -330,6 +345,7 @@
     .text_app_alerts{
         padding: 1rem;
     }
-    
-
+    .person_img{
+        display: none;
+    }
 }
