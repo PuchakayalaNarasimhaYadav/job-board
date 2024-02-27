@@ -7,6 +7,7 @@ import {Homedata,Carddata} from "./Homedata";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { FaApple,FaGooglePlay,} from "react-icons/fa";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
 export default function Home(){
     const[dialouge,setDialouge]=useState(false)
     return(
@@ -26,8 +27,8 @@ export default function Home(){
                         <h3 style={{color:'#283593'}}>Contact millions of profile to here</h3>
                         </div>
                             <Stack spacing={3} direction="row" >
-                                <Button variant="outlined" style={{textTransform:'capitalize'}}>Find Jobs</Button>
-                                <Button variant="contained" style={{textTransform:'capitalize'}}>Hire Talent</Button>
+                                <Link to='/signin'><Button variant="outlined" style={{textTransform:'capitalize'}}>Find Jobs</Button></Link>
+                                <Link to='/signin'><Button variant="contained" style={{textTransform:'capitalize'}}>Sign in</Button></Link>
                             </Stack>
                     </div>
                 </div>
@@ -42,12 +43,12 @@ export default function Home(){
                         <div className={HomeStyle.text_para1_clamp}>
                             <p>Find & <span style={{color:'#fe8f00'}}>Hire Candidates Worldwide</span></p>
                         </div>
-                        <div>
+                        <div style={{lineHeight:'30px'}}>
                             <p>Use ONLINE JOB to download millions of resumes, post jobs</p>
                             <p>from any location, Meet Skilled Professionals from Around the World.</p>
                         </div>
                         <div>
-                            <Button variant="contained" style={{textTransform:'capitalize'}}>Learn More</Button>
+                            <Link to="*"><Button variant="contained" style={{textTransform:'capitalize'}}>Learn More</Button></Link>
                         </div>
                     </div>
                 </div>
@@ -57,8 +58,11 @@ export default function Home(){
                             <div key={id}>
                                 <p>{home.images}</p>
                                 <h3>{home.Title}</h3>
+                                <div style={{lineHeight:'30px'}}>
                                 <p>{home.para1}</p>
                                 <p>{home.para2}</p>
+                                </div>
+                                
                             </div>
                         ))
                     }
@@ -73,12 +77,12 @@ export default function Home(){
                         <div className={HomeStyle.text_para1_clamp}>
                             <p>"Find your <span style={{color:'#fe8f00'}}>dream job </span>from <span style={{color:'#0097a7'}}>top companies</span> around the globe"</p>
                         </div> 
-                        <div>
+                        <div style={{lineHeight:'30px'}}>
                             <p>The ONLINE JOB portal has job opportunities from IT to Non-IT fields.</p>
                             <p>Jobseekers can access full-time, part-time, or work-from-home jobs on the website. Optimise your profile and search jobs for Free.</p>
                         </div>
                         <div>
-                            <Button variant="contained" style={{textTransform:'capitalize'}}>Get Hired</Button>
+                            <Link to='/signin'><Button variant="contained" style={{textTransform:'capitalize'}}>Get Hired</Button></Link>
                         </div>               
                 </div>
             </div>
@@ -98,7 +102,7 @@ export default function Home(){
                                 <img src={ item.img} alt={ft} />
                                 </div>
                                 <h3>{item.Title}</h3>
-                                <div> 
+                                <div style={{lineHeight:'27px'}}> 
                                     <p>{item.para1}</p>
                                     <p>{item.para2}</p>
                                 </div>
@@ -107,7 +111,7 @@ export default function Home(){
                     }
                 </div>
                 <div>
-                    <Button variant="contained" style={{textTransform:'capitalize'}}>Signup as Job seeker</Button>
+                    <Link to='/signup'><Button variant="contained" style={{textTransform:'capitalize'}}>Signup as Job seeker</Button></Link>
                 </div>
             </div>
             <div className={HomeStyle.home_contain5}>
@@ -118,7 +122,7 @@ export default function Home(){
                     <h3 style={{color:'#fe8f00'}}>Jobseekers</h3>
                     <p className={HomeStyle.text_para1_clamp}>Submit Your CV</p>
                     <p className={HomeStyle.text_para1_clamp} style={{color:'#0097a7'}}>Get Hired</p>
-                    <div>
+                    <div style={{lineHeight:'30px'}}>
                     <p>Optimise your profile with a Professional CV.</p>
                     <p>Read our blog on resumes if you need assistance in making one .</p>
                     </div>
@@ -131,20 +135,20 @@ export default function Home(){
                     <p style={{paddingLeft:'8px'}}>Get free job alerts straight to your inbox</p>
                     </div>
                     <div>
-                        <Button variant="contained" style={{textTransform:'capitalize'}}>Submit your CV</Button>
+                        <Link to='/signup'><Button variant="contained" style={{textTransform:'capitalize'}}>Submit your CV</Button></Link>
                     </div>                    
                 </div>
             </div>
             <div className={HomeStyle.home_contain6}>
-                <div className={HomeStyle.text_mobile_app}>
+                <div className={HomeStyle.text_mobile_app} >
                     <h3 style={{color:'#fe8f00'}}>Jobseekers Mobile App</h3>
                     <p className={HomeStyle.text_para1_clamp}>Get the <span style={{color:'#0097a7'}}>Online Job</span> App</p>
                     <p>Online Job mobile App bridges the gap between job seekers and recruiters.</p>
                     <p>Providing job seekers with the best career exposure. <span style={{color:'#fe8f00',cursor:'pointer'}} onClick={()=>setDialouge(true)}>Download the App now</span></p>
                     <div className={HomeStyle.button_mui}>
                         <Stack spacing={3} direction='row'>
-                        <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
-                        <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
+                        <Link to='*'><Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button></Link>
+                        <Link to='*'><Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button></Link>
                         </Stack>
                     </div>
                     {
@@ -152,8 +156,8 @@ export default function Home(){
                             
                             <div className={HomeStyle.app_mobile}>
                                 <Stack spacing={3} direction='row'>
-                                <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
-                                <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
+                                <Link to="*"><Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button></Link>
+                                <Link to='*'><Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button></Link>
                                 </Stack>
                             </div>
                             <div className={HomeStyle.close_btn}><IoIosCloseCircleOutline size={30} onClick={()=>setDialouge(false)}/></div>
@@ -171,15 +175,15 @@ export default function Home(){
                     <h3 style={{color:'#fe8f00'}}>Jobseekers</h3>
                     <h2>Get Free Job Alerts</h2>
                     <p className={HomeStyle.text_para1_clamp} style={{color:'#0097a7'}}>From Our Job Posting Channels</p>
-                    <div style={{lineHeight:'25px'}}>
+                    <div style={{lineHeight:'30px'}}>
                         <p>Once you subscribe, you get matching job notifications and varied industry job updates for you to review job opportunities.</p>
                         <p>As many people apply for job boards, ONLINE JOB helps with suitable jobs for your requirements.</p>
                         <p>We are constantly updating new jobs so that you will receive real-time opportunities for offers locally and globally. Once you fully register, you will enjoy job alerts for FREE.</p>
                     </div>
                     <div>
                         <Stack spacing={3} direction="row">
-                            <Button variant="contained" style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Create Job Alert</Button>
-                            <Button variant="outlined" style={{textTransform:'capitalize'}}>Follow us on Telegram</Button>
+                            <Link to='*'><Button variant="contained" style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Create Job Alert</Button></Link>
+                            <Link to='*'><Button variant="outlined" style={{textTransform:'capitalize'}}>Follow us on Telegram</Button></Link>
                         </Stack>
                     </div>
                 </div>

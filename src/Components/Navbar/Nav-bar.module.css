@@ -129,7 +129,11 @@
 }
 .textline_none{
     text-decoration: none;
-    color: #555;
+    color: black;
+}
+.textlinenone_navtwo{
+    text-decoration: none;
+    color: #fff;
 }
 @media screen and (max-width:1080px) {
     .navbar{
@@ -143,7 +147,7 @@
     }
 
     .nav_item2{
-        display: block;   
+        display: block; 
     }
     .icons{
         display: block;

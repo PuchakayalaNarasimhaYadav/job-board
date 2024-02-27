@@ -59,26 +59,31 @@ export default function Navbar() {
         setDropdown1(false)
         setDropdown2(false)
     }
+    function Logohandler(){
+        setDropdown1(false);
+        setDropdown2(false);
+        setDropdown3(false)
+    }
     return (
     <>
     <div className={Navstyles.main_navbar}>
     <nav className={Navstyles.navbar}>
         <div className={Navstyles.nav_item1}>
         <div className={Navstyles.box1}>
-            <Link to='/'><img src={logo} alt="logo" className={Navstyles.img_log_brand} /></Link>
+            <Link to='/' onClick={Logohandler}><img src={logo} alt="logo" className={Navstyles.img_log_brand} /></Link>
         </div>
         {
             Navbardata && Navbardata.map((data,id) => (
             <div className={Navstyles.box2} key={id}>
-                <div>{data.item1}</div>
-                <div>{data.item2}</div>
+                <Link to='/signup' className={Navstyles.textline_none}><div>{data.item1}</div></Link>
+                <Link to='signin' className={Navstyles.textline_none}><div>{data.item2}</div></Link>
                 <div >
                     <span onClick={Dropdownone} style={{cursor:'pointer'}}>{data.item3.re_source}</span>
                     <span className={Navstyles.Drop_down} ><IoMdArrowDropdown/></span>
                     {
                         dropdown1 ? <div className={Navstyles.drop_menu1}>
-                                        <p>{data.item3.blog}</p>
-                                        <p>{data.item3.news}</p>
+                                        <Link to='*' onClick={()=>setDropdown1(false)} className={Navstyles.textline_none}><p>{data.item3.blog}</p></Link>
+                                        <Link to='*' onClick={()=>setDropdown1(false)} className={Navstyles.textline_none}><p>{data.item3.news}</p></Link>
                                     </div>: null
                     }
                 </div>
@@ -89,7 +94,7 @@ export default function Navbar() {
                         dropdown2 ?<div className={Navstyles.drop_menu2} > 
                                         <Link to='/signin' onClick={()=>setDropdown2(false)} className={Navstyles.textline_none}><p>{data.item4.sign_in}</p></Link>
                                         <Link to='/signup' onClick={()=>setDropdown2(false)} className={Navstyles.textline_none}><p>{data.item4.register}</p></Link>
-                                        <p>{data.item4.job_seeker}</p>
+                                        <Link to='*' onClick={()=>setDropdown2(false)} className={Navstyles.textline_none}><p>{data.item4.job_seeker}</p></Link>
                                     </div>:null
                     }
                 </div>
@@ -98,10 +103,10 @@ export default function Navbar() {
                     <span className={Navstyles.Drop_down} ><IoMdArrowDropdown/></span>
                     {
                         dropdown3? <div className={Navstyles.drop_menu3}>
-                            <p>{data.item5.sign_in}</p>
-                            <p>{data.item5.regi}</p>
-                            <p>{data.item5.business_solution}</p>
-                            <p>{data.item5.pricing}</p>
+                            <Link to='*' onClick={()=>setDropdown3(false)} className={Navstyles.textline_none}><p>{data.item5.sign_in}</p></Link>
+                            <Link to="*" onClick={()=>setDropdown3(false)} className={Navstyles.textline_none}><p>{data.item5.regi}</p></Link>
+                            <Link to="*" onClick={()=>setDropdown3(false)} className={Navstyles.textline_none}><p>{data.item5.business_solution}</p></Link>
+                            <Link to="*" onClick={()=>setDropdown3(false)} className={Navstyles.textline_none}><p>{data.item5.pricing}</p></Link>
                         </div>: null
                     }
                 </div>
@@ -115,17 +120,17 @@ export default function Navbar() {
                     {
                         Dialougedata && Dialougedata.map((popup,index)=>(
                             <div className={Navstyles.Dialouge_box} key={index}>
-                                    <div>{popup.data1}</div>
-                                    <div>{popup.data2}</div>
+                                    <Link to="/signup" onClick={()=>setDialougebox(false)} className={Navstyles.textlinenone_navtwo}><div>{popup.data1}</div></Link>
+                                    <Link to='/signin' onClick={()=>setDialougebox(false)} className={Navstyles.textlinenone_navtwo}><div>{popup.data2}</div></Link>
                                     <div>
                                         <span style={{cursor:'pointer'}} onClick={Dropdownone}>{popup.data3.res} </span>
                                         <span className={Navstyles.Drop_down} ><FaAngleDown/></span>
                                         {
                                         dropdown1? <div className={Navstyles.drop_menu1}>
-                                                    <p>{popup.data3.blog}</p>
-                                                    <p>{popup.data3.news}</p>
+                                                    <Link to='*' onClick={()=>setDialougebox(false)||setDropdown1(false)} className={Navstyles.textline_none}><p>{popup.data3.blog}</p></Link>
+                                                    <Link to="*" onClick={()=>setDialougebox(false) ||setDropdown1(false)} className={Navstyles.textline_none}><p>{popup.data3.news}</p></Link>
                                                 </div> : null
-                                        } 
+                                        }
                                     </div>
                                     <div>
                                         <span style={{cursor:'pointer'}} onClick={Dropdowntwo}>{popup.data4.jobseeker}</span> 
@@ -134,7 +139,7 @@ export default function Navbar() {
                                         dropdown2 ? <div className={Navstyles.drop_menu2}>
                                                     <Link to='/signin' onClick={()=>setDialougebox(false)||setDropdown2(false)} className={Navstyles.textline_none}><p>{popup.data4.sign}</p></Link> 
                                                     <Link to='/signup' onClick={()=>setDialougebox(false)||setDropdown2(false)} className={Navstyles.textline_none}><p>{popup.data4.register}</p></Link> 
-                                                    <p>{popup.data4.jb_Solution}</p>
+                                                    <Link to='*' onClick={()=>setDialougebox(false)||setDropdown2(false)} className={Navstyles.textline_none}><p>{popup.data4.jb_Solution}</p></Link>
                                                 </div> : null
                                         }
                                     </div>
@@ -143,10 +148,10 @@ export default function Navbar() {
                                         <span  className={Navstyles.Drop_down} ><FaAngleDown/></span>
                                         {
                                             dropdown3?<div className={Navstyles.drop_menu3}>
-                                                        <p>{popup.data5.sign_in}</p>
-                                                        <p>{popup.data5.regi}</p>
-                                                        <p>{popup.data5.business_solution}</p>
-                                                        <p>{popup.data5.pricing}</p>
+                                                        <Link to='*' onClick={()=>setDialougebox(false)||setDropdown3(false)} className={Navstyles.textline_none}><p>{popup.data5.sign_in}</p></Link>
+                                                        <Link to="*" onClick={()=>setDialougebox(false)||setDropdown3(false)} className={Navstyles.textline_none}><p>{popup.data5.regi}</p></Link>
+                                                        <Link to="*" onClick={()=>setDialougebox(false)||setDropdown3(false)} className={Navstyles.textline_none}><p>{popup.data5.business_solution}</p></Link>
+                                                        <Link to="*" onClick={()=>setDialougebox(false)||setDropdown3(false)} className={Navstyles.textline_none}><p>{popup.data5.pricing}</p></Link>
                                                     </div>: null
                                         }                                     
                                     </div>
