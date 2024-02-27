@@ -60,6 +60,9 @@
     justify-content: space-between;
     margin: 10px 20px;
 }
+small{
+    color: red;
+}
 @media (max-width:1080px){
     .form_matter{
         background-size:100%;

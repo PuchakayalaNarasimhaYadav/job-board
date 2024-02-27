@@ -19,11 +19,11 @@ export default function Home(){
                 <div className={HomeStyle.text_heading}>
                     <div className={HomeStyle.text_data}>
                         <div className={HomeStyle.text_para_clamp}>
-                            <p>Find Your <span style={{color:'#3dbbf3'}}>Next Hire</span>, Post <span style={{color:'#fe8f00'}}>Jobs</span></p>
+                            <p>Find Your <span style={{color:'#0277bd'}}>Next Hire</span>, Post <span style={{color:'#fe8f00'}}>Jobs</span></p>
                             <p>& Discover Skilled Candidates</p>
                         </div>
                         <div>
-                        <h3>Contact millions of profile to here</h3>
+                        <h3 style={{color:'#283593'}}>Contact millions of profile to here</h3>
                         </div>
                             <Stack spacing={3} direction="row" >
                                 <Button variant="outlined" style={{textTransform:'capitalize'}}>Find Jobs</Button>
@@ -44,7 +44,7 @@ export default function Home(){
                         </div>
                         <div>
                             <p>Use ONLINE JOB to download millions of resumes, post jobs</p>
-                            <p>from any location, run a reference check and hire talent.</p>
+                            <p>from any location, Meet Skilled Professionals from Around the World.</p>
                         </div>
                         <div>
                             <Button variant="contained" style={{textTransform:'capitalize'}}>Learn More</Button>
@@ -71,7 +71,7 @@ export default function Home(){
                 </div>
                 <div className={HomeStyle.text_content}>
                         <div className={HomeStyle.text_para1_clamp}>
-                            <p>"Find your <span style={{color:'#fe8f00'}}>dream job </span>from <span style={{color:'#3dbbf3'}}>top companies</span> around the globe"</p>
+                            <p>"Find your <span style={{color:'#fe8f00'}}>dream job </span>from <span style={{color:'#0097a7'}}>top companies</span> around the globe"</p>
                         </div> 
                         <div>
                             <p>The ONLINE JOB portal has job opportunities from IT to Non-IT fields.</p>
@@ -117,7 +117,7 @@ export default function Home(){
                 <div className={HomeStyle.text_matter}>
                     <h3 style={{color:'#fe8f00'}}>Jobseekers</h3>
                     <p className={HomeStyle.text_para1_clamp}>Submit Your CV</p>
-                    <p className={HomeStyle.text_para1_clamp} style={{color:'#3dbbf3'}}>Get Hired</p>
+                    <p className={HomeStyle.text_para1_clamp} style={{color:'#0097a7'}}>Get Hired</p>
                     <div>
                     <p>Optimise your profile with a Professional CV.</p>
                     <p>Read our blog on resumes if you need assistance in making one .</p>
@@ -138,7 +138,7 @@ export default function Home(){
             <div className={HomeStyle.home_contain6}>
                 <div className={HomeStyle.text_mobile_app}>
                     <h3 style={{color:'#fe8f00'}}>Jobseekers Mobile App</h3>
-                    <p className={HomeStyle.text_para1_clamp}>Get the <span style={{color:'#3dbbf3'}}>Online Job</span> App</p>
+                    <p className={HomeStyle.text_para1_clamp}>Get the <span style={{color:'#0097a7'}}>Online Job</span> App</p>
                     <p>Online Job mobile App bridges the gap between job seekers and recruiters.</p>
                     <p>Providing job seekers with the best career exposure. <span style={{color:'#fe8f00',cursor:'pointer'}} onClick={()=>setDialouge(true)}>Download the App now</span></p>
                     <div className={HomeStyle.button_mui}>
@@ -150,11 +150,13 @@ export default function Home(){
                     {
                         dialouge ? <div className={HomeStyle.btn_mui}>
                             
-                            <div><IoIosCloseCircleOutline size={30} onClick={()=>setDialouge(false)}/></div>
-                            <Stack spacing={3} direction='row'>
-                            <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
-                            <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
-                            </Stack>
+                            <div className={HomeStyle.app_mobile}>
+                                <Stack spacing={3} direction='row'>
+                                <Button variant="contained" startIcon={<FaGooglePlay/>} style={{backgroundColor:'#3949ab',textTransform:'capitalize'}}>Google playstore</Button>
+                                <Button variant="contained" startIcon={<FaApple/>} style={{backgroundColor:'black',textTransform:'capitalize'}}>App Store</Button>
+                                </Stack>
+                            </div>
+                            <div className={HomeStyle.close_btn}><IoIosCloseCircleOutline size={30} onClick={()=>setDialouge(false)}/></div>
                         </div>:null
 
                     }
@@ -168,8 +170,8 @@ export default function Home(){
                 <div className={HomeStyle.text_app_alerts}>
                     <h3 style={{color:'#fe8f00'}}>Jobseekers</h3>
                     <h2>Get Free Job Alerts</h2>
-                    <p className={HomeStyle.text_para1_clamp} style={{color:'#3dbbf3'}}>From Our Job Posting Channels</p>
-                    <div>
+                    <p className={HomeStyle.text_para1_clamp} style={{color:'#0097a7'}}>From Our Job Posting Channels</p>
+                    <div style={{lineHeight:'25px'}}>
                         <p>Once you subscribe, you get matching job notifications and varied industry job updates for you to review job opportunities.</p>
                         <p>As many people apply for job boards, ONLINE JOB helps with suitable jobs for your requirements.</p>
                         <p>We are constantly updating new jobs so that you will receive real-time opportunities for offers locally and globally. Once you fully register, you will enjoy job alerts for FREE.</p>

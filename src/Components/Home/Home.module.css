@@ -74,14 +74,12 @@
     justify-content: center;
     
 }
-
-
 .bgweb_img{
     flex: 1;
     background-image: url('../Assets/download.webp');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: 55%;
     padding: 10px;
 }
 .Matter_info{
@@ -183,6 +181,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 .text_matter{
     flex: 2;
@@ -239,10 +239,10 @@
 
 .notify_app{
     flex: 1;
-    background-image: url('../Assets/Untitled-design-4-1.png');
+    background-image: url('../Assets/push-notification.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
+    background-size:120%;
     box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
     border-radius: 50px;
     transition: all 0.5s;
@@ -329,11 +329,19 @@
         align-items: center;
         flex-wrap: wrap;
         position: absolute;
-        background-color: #cad2d3;
+        background-color: #f8f8f8;
         top: -65%;
         left:0;right: 0;
-        border-radius: 20px;
+        border-radius: 10px;
         cursor: pointer;
+        /* margin: 0 20px; */
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    }
+    .app_mobile{
+        flex: 1;
+    }
+    .close_btn{
+        flex: 0;
     }
     .home_contain7{
         flex-direction: column;

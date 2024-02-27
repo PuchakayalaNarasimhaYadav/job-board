@@ -12,7 +12,7 @@ export default function Navbar() {
     const[dialougebox,setDialougebox]=useState(false);
     const[dropdown1,setDropdown1]=useState(false);
     const[dropdown2,setDropdown2]=useState(false);
-    const[dropdown3,setDropdown3]=useState(false);  
+    const[dropdown3,setDropdown3]=useState(false);
     useEffect(()=>{
         if(dialougebox === true){
             document.body.style.overflow ='hidden'
@@ -65,16 +65,16 @@ export default function Navbar() {
     <nav className={Navstyles.navbar}>
         <div className={Navstyles.nav_item1}>
         <div className={Navstyles.box1}>
-            <img src={logo} alt="logo" className={Navstyles.img_log_brand} />
+            <Link to='/'><img src={logo} alt="logo" className={Navstyles.img_log_brand} /></Link>
         </div>
         {
             Navbardata && Navbardata.map((data,id) => (
             <div className={Navstyles.box2} key={id}>
                 <div>{data.item1}</div>
                 <div>{data.item2}</div>
-                <div>
-                    {data.item3.re_source}
-                    <span className={Navstyles.Drop_down} onClick={Dropdownone}><IoMdArrowDropdown/></span>
+                <div >
+                    <span onClick={Dropdownone} style={{cursor:'pointer'}}>{data.item3.re_source}</span>
+                    <span className={Navstyles.Drop_down} ><IoMdArrowDropdown/></span>
                     {
                         dropdown1 ? <div className={Navstyles.drop_menu1}>
                                         <p>{data.item3.blog}</p>
@@ -82,20 +82,20 @@ export default function Navbar() {
                                     </div>: null
                     }
                 </div>
-                <div>
-                    {data.item4.seeker}
-                    <span className={Navstyles.Drop_down} onClick={Dropdowntwo}><IoMdArrowDropdown/></span>
+                <div >
+                    <span onClick={Dropdowntwo}  style={{cursor:'pointer'}}>{data.item4.seeker}</span>
+                    <span className={Navstyles.Drop_down} ><IoMdArrowDropdown/></span>
                     {
                         dropdown2 ?<div className={Navstyles.drop_menu2} > 
-                                        <Link to='/signin' onClick={()=>setDropdown2(false)}><p>{data.item4.sign_in}</p></Link>
-                                        <Link to='/signup' onClick={()=>setDropdown2(false)}><p>{data.item4.register}</p></Link>
+                                        <Link to='/signin' onClick={()=>setDropdown2(false)} className={Navstyles.textline_none}><p>{data.item4.sign_in}</p></Link>
+                                        <Link to='/signup' onClick={()=>setDropdown2(false)} className={Navstyles.textline_none}><p>{data.item4.register}</p></Link>
                                         <p>{data.item4.job_seeker}</p>
                                     </div>:null
                     }
                 </div>
-                <div>
-                    {data.item5.business}
-                    <span className={Navstyles.Drop_down} onClick={Dropdownthree}><IoMdArrowDropdown/></span>
+                <div >
+                    <span onClick={Dropdownthree} style={{cursor:'pointer'}}>{data.item5.business}</span>
+                    <span className={Navstyles.Drop_down} ><IoMdArrowDropdown/></span>
                     {
                         dropdown3? <div className={Navstyles.drop_menu3}>
                             <p>{data.item5.sign_in}</p>
@@ -118,8 +118,8 @@ export default function Navbar() {
                                     <div>{popup.data1}</div>
                                     <div>{popup.data2}</div>
                                     <div>
-                                        {popup.data3.res} 
-                                        <span className={Navstyles.Drop_down} onClick={Dropdownone}><FaAngleDown/></span>
+                                        <span style={{cursor:'pointer'}} onClick={Dropdownone}>{popup.data3.res} </span>
+                                        <span className={Navstyles.Drop_down} ><FaAngleDown/></span>
                                         {
                                         dropdown1? <div className={Navstyles.drop_menu1}>
                                                     <p>{popup.data3.blog}</p>
@@ -128,19 +128,19 @@ export default function Navbar() {
                                         } 
                                     </div>
                                     <div>
-                                        {popup.data4.jobseeker} 
-                                        <span className={Navstyles.Drop_down} onClick={Dropdowntwo}><FaAngleDown/></span>
+                                        <span style={{cursor:'pointer'}} onClick={Dropdowntwo}>{popup.data4.jobseeker}</span> 
+                                        <span className={Navstyles.Drop_down} ><FaAngleDown/></span>
                                         {
                                         dropdown2 ? <div className={Navstyles.drop_menu2}>
-                                                    <Link to='/signin' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.sign}</p></Link> 
-                                                    <Link to='/signup' onClick={()=>setDialougebox(false)||setDropdown2(false)}><p>{popup.data4.register}</p></Link> 
+                                                    <Link to='/signin' onClick={()=>setDialougebox(false)||setDropdown2(false)} className={Navstyles.textline_none}><p>{popup.data4.sign}</p></Link> 
+                                                    <Link to='/signup' onClick={()=>setDialougebox(false)||setDropdown2(false)} className={Navstyles.textline_none}><p>{popup.data4.register}</p></Link> 
                                                     <p>{popup.data4.jb_Solution}</p>
                                                 </div> : null
                                         }
                                     </div>
                                     <div>
-                                        {popup.data5.business} 
-                                        <span className={Navstyles.Drop_down} onClick={Dropdownthree}><FaAngleDown/></span>
+                                        <span style={{cursor:'pointer'}} onClick={Dropdownthree}>{popup.data5.business}</span> 
+                                        <span  className={Navstyles.Drop_down} ><FaAngleDown/></span>
                                         {
                                             dropdown3?<div className={Navstyles.drop_menu3}>
                                                         <p>{popup.data5.sign_in}</p>
@@ -151,7 +151,7 @@ export default function Navbar() {
                                         }                                     
                                     </div>
                                     <div>
-                                        <Button variant="contained">Request For Demo</Button>
+                                        <Button variant="contained" style={{textTransform:'capitalize'}}>Request For Demo</Button>
                                     </div>
                             </div> 
                         ))

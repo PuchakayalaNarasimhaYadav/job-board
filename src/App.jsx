@@ -6,8 +6,6 @@ import Signin from "./Components/Sign-in/Sign-in";
 import Footercomponent from "./Components/Footer/Footer";
 import {  Route, Routes } from "react-router-dom";
 import Signup from "./Components/Sign-up/Sign-up";
-
-
 export default function App() {
     return (
     <div>

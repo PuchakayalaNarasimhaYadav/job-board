@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    user-select: none;
+    /* user-select: none; */
 }
 .text_para_clamp{
     font-size: clamp(2rem, 5.5vw, 3rem);
@@ -11,3 +11,4 @@
 .text_para1_clamp{
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
+

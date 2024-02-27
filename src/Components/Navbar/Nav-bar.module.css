@@ -44,7 +44,7 @@
     flex-wrap: wrap;
 }
 .nav_item2{
-    background-color: #293c4f;
+    background-color: #3b3e44;
     flex: 1;
     display: none;
     padding: 3rem;
@@ -126,6 +126,10 @@
 }
 .Drop_down:hover{
     color: orange;
+}
+.textline_none{
+    text-decoration: none;
+    color: #555;
 }
 @media screen and (max-width:1080px) {
     .navbar{
