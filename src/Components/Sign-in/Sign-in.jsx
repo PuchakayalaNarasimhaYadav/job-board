@@ -6,12 +6,12 @@ import { useFormik } from "formik";
 export default function Signin() {
   const validate = values => {
     const errors = {};
-    if (!values.username) {
+    if (!values.username || !values.username.trim()) {
       errors.username = '*Enter your email address';
     } else if (values.username.length < 15) {
       errors.username = 'Must be 15 characters or less';
     }
-    if (!values.password) {
+    if (!values.password || !values.password.trim()) {
       errors.password = '*Enter your password';
     } else if (values.password.length < 8 ) {
       errors.password = 'Must be 8 characters';
@@ -50,6 +50,7 @@ export default function Signin() {
                 color="success"
                 onChange={formik.handleChange}
                 value={formik.values.username}
+                onBlur={formik.handleBlur}
                 error={formik.touched.username && Boolean(formik.errors.username)}
                 helperText={formik.touched.username && formik.errors.username}
               />
@@ -62,6 +63,7 @@ export default function Signin() {
                 color="success"
                 onChange={formik.handleChange}
                 value={formik.values.password}
+                onBlur={formik.handleBlur}
                 error={formik.touched.password && Boolean(formik.errors.password)}
                 helperText={formik.touched.password && formik.errors.password}
               />
