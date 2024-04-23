@@ -1,9 +1,10 @@
 import React from "react";
 import signinstyles from "./Sign-in.module.css";
 import { Button, Stack, TextField } from "@mui/material";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useFormik } from "formik";
 export default function Signin() {
+  const navigate =useNavigate()
   const validate = values => {
     const errors = {};
     if (!values.username || !values.username.trim()) {
@@ -25,8 +26,12 @@ export default function Signin() {
       },
       validate,
       onSubmit: values => {
-        alert(JSON.stringify(values, null, 2));
-        formik.resetForm()
+       if(values.username === values.password){
+          alert('successfully logedin')
+          navigate('/dashboard')
+       }else{
+        alert('falied')
+       }
       },
     });
   return (
@@ -69,7 +74,7 @@ export default function Signin() {
               />
             </Stack>
             </center> 
-            <center style={{margin:'10px 0px'}}>
+            <center style={{margin:'20px 0px'}}>
             <Stack sx={{width:'65%'}} spacing={2} direction="column">
                 <Button variant="contained" style={{padding:'10px',textTransform:'capitalize'}} type="submit">Login</Button>
                 <p>or</p>

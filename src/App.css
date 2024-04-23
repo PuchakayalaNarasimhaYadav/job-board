@@ -11,4 +11,8 @@
 .text_para1_clamp{
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
-
+.css-1wc848c-MuiFormHelperText-root.Mui-error{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}

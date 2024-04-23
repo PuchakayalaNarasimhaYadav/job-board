@@ -195,7 +195,7 @@ export default function Signup() {
             </Stack>
             <div className={Signupstyles.btn_submit}>
               <Stack sx={{width:'40%'}}>
-              <Button variant="contained"  type="submit" style={{padding:'10px'}}>submit</Button>
+              <Button variant="contained"  type="submit" style={{padding:'10px',textTransform:'capitalize'}}>submit</Button>
               </Stack>
               <small>By signing up you agree to User Agreement , Privacy Policy , Cookie Policy .</small>
               <p>Already a Member? <Link to='/signin'>Login</Link></p>
