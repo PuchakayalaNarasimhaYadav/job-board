@@ -61,7 +61,7 @@ export default function Signup() {
       <div className={Signupstyles.signup_form}>
         <div className={Signupstyles.signup_title}>
           <p><FaUserAlt size={30} /></p>
-          <p className={Signupstyles.signuP_title_clamp}> Create your free jobseeker account</p>
+          <p className={Signupstyles.signuP_title_clamp}> Create your jobseeker account</p>
         </div>
         <form action="" onSubmit={formik.handleSubmit}>
             <small style={{margin:'0 5px',color:'darkorange'}}>Free to join & get job alerts that match your skills</small>
@@ -114,7 +114,6 @@ export default function Signup() {
             sx={{width:'100%'}}
             type="text"
             />
-
             <TextField 
             variant="outlined"
             id='mobilenumber'
@@ -141,7 +140,6 @@ export default function Signup() {
             sx={{width:'100%'}}
             type="text"
             />
-
             <TextField 
             variant="outlined"
             id='jobtitle'
